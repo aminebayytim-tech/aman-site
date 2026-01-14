@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم العامل</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Tahoma, Arial, sans-serif;
+    direction: rtl;
+    background:#f3f4f6;
+}
+
+/* ===== الهيدر ===== */
+.header{
+    background:#ffffff;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 5px rgba(0,0,0,.05);
+}
+
+.header h2{
+    margin:0;
+    font-size:18px;
+    color:#065f46;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.avatar{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#0f766e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+/* ===== القائمة ===== */
+.menu{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    padding:20px;
+}
+
+.menu .item{
+    background:#fff;
+    border-radius:12px;
+    padding:15px 5px;
+    text-align:center;
+    font-size:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.menu .active{
+    background:#e6fffa;
+    color:#065f46;
+    font-weight:bold;
+}
+
+/* ===== الرسائل ===== */
+.messages-box{
+    background:#fff;
+    margin:0 20px 20px;
+    border-radius:16px;
+    padding:15px;
+}
+
+.messages-box h3{
+    margin:0;
+    color:#065f46;
+}
+
+.new-chat{
+    background:#0f766e;
+    color:#fff;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+    margin:10px 0;
+}
+
+.search{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+/* ===== عنصر رسالة ===== */
+.chat{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+.chat:last-child{
+    border-bottom:none;
+}
+
+.circle{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#0f766e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.content{
+    flex:1;
+}
+
+.name{
+    font-weight:bold;
+    font-size:14px;
+}
+
+.msg{
+    font-size:13px;
+    color:#555;
+}
+
+.time{
+    font-size:12px;
+    color:#999;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== الهيدر ===== -->
+<div class="header">
+    <h2>لوحة تحكم العامل</h2>
+    <div class="user">
+        <div>
+            <div>عامل جديد</div>
+            <small>بناء</small>
+        </div>
+        <div class="avatar">ع</div>
+    </div>
+</div>
+
+<!-- ===== القائمة ===== -->
+<div class="menu">
+    <div class="item">🏠<br>نظرة عامة</div>
+    <div class="item">💼<br>الوظائف المتاحة</div>
+    <div class="item">📋<br>وظائفي</div>
+    <div class="item">💰<br>الأرباح</div>
+    <div class="item active">💬<br>الرسائل</div>
+    <div class="item">👤<br>الملف الشخصي</div>
+</div>
+
+<!-- ===== الرسائل ===== -->
+<div class="messages-box">
+    <h3>نظام المراسلة</h3>
+    <button class="new-chat">+ محادثة جديدة</button>
+
+    <input type="text" class="search" placeholder="بحث في المحادثات...">
+
+    <div class="chat">
+        <div class="circle">م</div>
+        <div class="content">
+            <div class="name">محمد صاحب العمل</div>
+            <div class="msg">مرحبا، هل يمكنك البدء غداً؟</div>
+        </div>
+        <div class="time">10:30</div>
+    </div>
+
+    <div class="chat">
+        <div class="circle">ش</div>
+        <div class="content">
+            <div class="name">شركة البناء الحديث</div>
+            <div class="msg">نحتاجك لمشروع جديد</div>
+        </div>
+        <div class="time">أمس</div>
+    </div>
+
+</div>
+
+</body>
+</html>
